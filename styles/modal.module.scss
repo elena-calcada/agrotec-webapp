@@ -1,0 +1,62 @@
+.container {
+  width: 480px;
+
+  h2 {
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.infoContainer {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.buttonClose {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-right: 1.5625rem;
+
+
+
+  button {
+    background: var(--red);
+    border: none;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  a {
+    color: var(--white);
+    font-weight: 500;
+    background-color: var(--green);
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}

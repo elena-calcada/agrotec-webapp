@@ -1,0 +1,49 @@
+.container {
+  width: 480px;
+
+  h2 {
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.infoContainer {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.buttonClose {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-right: 1.5625rem;
+
+  button {
+    transition: transform 0.6s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 300px;
+  }
+}

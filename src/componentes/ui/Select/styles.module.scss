@@ -1,0 +1,17 @@
+.select {
+  height: 40px;
+  border: none;
+  border-radius: 0.35rem;
+  color: var(--dark);
+  padding: 0 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  option {
+    color: var(--dark);
+    ;
+  }
+}
+
+.select:invalid {
+  color: rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,19 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem;
+
+  h1 {
+    //color: var(--dark);
+    font: 700 var(--title-size) var(--font);
+    margin-bottom: 2rem;
+    color: var(--red);
+  }
+
+  h2 {
+    font: 700 1.4rem var(--font);
+    color: var(--red);
+  }
+}

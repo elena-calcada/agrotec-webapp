@@ -1,0 +1,90 @@
+.container {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    color: var(--dark);
+  }
+}
+
+.containerHeader {
+  display: flex;
+
+  button {
+    background: transparent;
+    border: none;
+    margin-left: 1rem;
+  }
+}
+
+.listUsers {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+}
+
+.user {
+  //padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  border-radius: 0.3rem;
+  background-color: var(--white);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  button {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    transition: color 0.5s;
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+}
+
+.tag {
+  width: 9px;
+  background-color: var(--green);
+  height: 40px;
+  border-radius: 0.3rem 0 0 0.3rem;
+  margin-right: 1rem;
+}
+
+.accessAdmin {
+  font-size: 0.65rem;
+  color: var(--green);
+  background: #D9F8E4;
+  padding: 0.25rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+}
+
+.accessExecutor {
+  font-size: 0.65rem;
+  color: var(--blue);
+  background: #E3E1F6;
+  padding: 0.25rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+}
+
+.accessNew {
+  font-size: 0.65rem;
+  color: var(--red);
+  background: #FFE0E0;
+  padding: 0.25rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+}

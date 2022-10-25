@@ -1,0 +1,53 @@
+.containerCenter {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logoImage {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login {
+  margin-top: 2rem;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+
+  h1 {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font: 700 var(--title-size) var(--font);
+  }
+
+  form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  form button {
+    height: 40px;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.text {
+  cursor: pointer;
+  color: var(--dark);
+  text-align: ceter;
+}
+
+@media(max-width: 620px) {
+  .login {
+    width: 90%;
+  }
+}

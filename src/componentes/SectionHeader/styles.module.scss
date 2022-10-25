@@ -1,0 +1,31 @@
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: var(--dark);
+    font-weight: 500;
+    background-color: var(--orange);
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttonRefresh {
+  background: transparent;
+  border: none;
+}
