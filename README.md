@@ -6,7 +6,7 @@ Este é um aplicativo web para que o proprietário da loja Agrotec possa cadastr
 
 ## :rocket: Tecnologias
 
-The following tools were used in this project:
+Neste projeto foram usadas as seguintes tecnologias:
 
 - [NextJS](https://nextjs.org/docs)
 - [Typescript](https://www.typescriptlang.org)
@@ -17,7 +17,7 @@ The following tools were used in this project:
 ## :white_check_mark: Requisitos
 
 Antes de iniciar, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados.\
-Você pode encontrar a api da aplicação **[here 💻](https://github.com/elena-calcada/agrotec-api)**
+Você pode encontrar a api da aplicação **[aqui 💻](https://github.com/elena-calcada/agrotec-api)**
 
 ## :checkered_flag: Iniciando
 
