@@ -10,6 +10,8 @@ import Modal from "react-modal";
 import { ModalProduct } from "../../componentes/ModalProduct";
 import { Input } from "../../componentes/ui/Input";
 import { Select } from "../../componentes/ui/Select";
+import Image from "next/image";
+import { toast } from "react-toastify";
 
 export type ProductProps = {
   id: string;
@@ -95,8 +97,23 @@ export default function Products({ listProducts, listSuppliers, listGroups, list
     setModalVisible(true);
   }
 
-  async function handleDeleteProduct() {
+  async function handleDeleteProduct(id: string) {
+    try {
+      const apiClient = setupAPIClient();
 
+      await apiClient.delete("/products", {
+        params: {
+          id
+        }
+      });
+
+      const response = await apiClient.get("/products");
+      setProducts(response.data);
+      setModalVisible(false);
+
+    } catch (err) {
+      toast("Erro ao excluir produto!");
+    }
   }
 
   async function handleFilterProduct() {

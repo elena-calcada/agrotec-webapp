@@ -108,7 +108,7 @@ export default function RegistarProduct({ listSuppliers, listGroups, listCategor
 
       await apiClient.post("/products", data);
 
-      toast.success("Produto cadastrado com sucesso!")
+      toast.success("Produto cadastrado com sucesso!");
 
     } catch (err) {
       toast.error("Erro ao cadastrar produto!");
@@ -216,6 +216,7 @@ export default function RegistarProduct({ listSuppliers, listGroups, listCategor
             />
 
             <Button
+              className={styles.buttonForm}
               type="submit"
               loading={loading}
             >

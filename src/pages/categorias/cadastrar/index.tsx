@@ -61,7 +61,7 @@ export default function RegisterCategory({ listGroup }: ListGroupProps) {
     } catch (err) {
 
       toast.error("Erro ao cadastrar!");
-      toast.warn("Verifique se esse fornecedor já não está no sistema...");
+      toast.warn("Verifique se essa categoria já não está no sistema...");
 
       setName("");
       setGroupSelected("");
@@ -115,6 +115,7 @@ export default function RegisterCategory({ listGroup }: ListGroupProps) {
             <Button
               type="submit"
               loading={loading}
+              className={styles.buttonForm}
             >
               Cadastrar
             </Button>

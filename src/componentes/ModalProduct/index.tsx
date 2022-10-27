@@ -36,6 +36,7 @@ export function ModalProduct({
       onRequestClose={onRequestClose}
       style={customStyles}
     >
+
       <button
         type="button"
         onClick={onRequestClose}
@@ -46,15 +47,24 @@ export function ModalProduct({
       </button>
 
       <div className={styles.container}>
-        <h2>Detalhes da categoria</h2>
+        <h2>Detalhes do produto</h2>
+        <div className={styles.image}>
+          <img src={`http://localhost:3333/images/${product.image}`} alt="produto" />
+        </div>
 
         <section className={styles.infoContainer}>
+
           <span>
             <strong>Nome:</strong> {product.name}
           </span>
-
+          <span>
+            <strong>Categoria:</strong> {product.category.name}
+          </span>
+          <span>
+            <strong>Fornecedor:</strong> {product.supplier.name}
+          </span>
           {product.technical_description && (
-            <span>
+            <span className={styles.description}>
               <strong>Descrição:</strong> {product.technical_description}
             </span>
           )}
@@ -64,17 +74,10 @@ export function ModalProduct({
               <strong>Descrição:</strong> Não informada
             </span>
           )}
-
-          <span>
-            <strong>Categoria:</strong> {product.category.name}
-          </span>
-          <span>
-            <strong>Fornecedor:</strong> {product.supplier.name}
-          </span>
         </section>
 
         <div className={styles.buttons}>
-          <Link href={`/categorias/${product.id}`}>
+          <Link href={`/produtos/${product.id}`}>
             <a>Editar</a>
           </Link>
 

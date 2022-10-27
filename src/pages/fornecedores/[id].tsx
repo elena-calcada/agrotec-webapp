@@ -84,6 +84,7 @@ export default function EditSupplier({ detailSupplier }: SupplierProps) {
             <Button
               type="submit"
               loading={loading}
+              className={styles.buttonForm}
             >
               Editar
             </Button>
