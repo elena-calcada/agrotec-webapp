@@ -76,7 +76,6 @@ export default function SignUp() {
             <Button
               type="submit"
               loading={loading}
-              className={styles.buttonForm}
             >
               Cadastrar
             </Button>

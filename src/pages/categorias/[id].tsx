@@ -124,7 +124,7 @@ export default function EditCategory({ listGroup, detailCategory }: RequestProps
             <Button
               type="submit"
               loading={loading}
-              className={styles.buttonForm}
+              className={styles.buttonGreen}
             >
               Editar
             </Button>

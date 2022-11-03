@@ -29,3 +29,15 @@
   background: transparent;
   border: none;
 }
+
+@media (max-width: 320px) {
+  .containerHeader {
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .title {
+    gap: 0.5rem;
+  }
+}

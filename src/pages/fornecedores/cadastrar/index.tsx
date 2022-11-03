@@ -78,7 +78,7 @@ export default function RegisterSupplier() {
             <Button
               type="submit"
               loading={loading}
-              className={styles.buttonForm}
+              className={styles.buttonGreen}
             >
               Cadastrar
             </Button>

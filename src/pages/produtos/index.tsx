@@ -10,8 +10,8 @@ import Modal from "react-modal";
 import { ModalProduct } from "../../componentes/ModalProduct";
 import { Input } from "../../componentes/ui/Input";
 import { Select } from "../../componentes/ui/Select";
-import Image from "next/image";
 import { toast } from "react-toastify";
+import { BiFilter } from "react-icons/bi";
 
 export type ProductProps = {
   id: string;
@@ -171,70 +171,71 @@ export default function Products({ listProducts, listSuppliers, listGroups, list
           <SectionHeader
             type="button"
             path="/produtos/cadastrar"
-            name="Novo produto"
+            name="Novo"
             title="Produtos"
             onClick={handleRefreshListProducts}
           />
 
-          <div className={styles.filters}>
-            <Input
-              type="text"
-              placeholder="Filtrar pelo nome..."
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+          <div className={styles.containerFilters}>
+            <div className={styles.filters}>
+              <Input
+                type="text"
+                placeholder="Filtrar pelo nome..."
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
 
-            <Select
-              value={supplierSelected}
-              onChange={(e) => setSupplierSelected(e.target.value)}
-              expression="Filtrar por fornecedor..."
+              <Select
+                value={supplierSelected}
+                onChange={(e) => setSupplierSelected(e.target.value)}
+                expression="Filtrar por fornecedor..."
+              >
+                {suppliers.map((item, index) => {
+                  return (
+                    <option key={item.id} value={index}>
+                      {item.name}
+                    </option>
+                  )
+                })}
+              </Select>
+
+              <Select
+                value={groupSelected}
+                onChange={handleChangeGroup}
+                expression="Filtrar por grupo..."
+              >
+                {groups.map((item, index) => {
+                  return (
+                    <option key={item.id} value={index}>
+                      {item.name}
+                    </option>
+                  )
+                })}
+              </Select>
+
+              <Select
+                value={categorySelected}
+                onChange={(e) => setCategorySelected(e.target.value)}
+                expression="Filtrar por categoria..."
+              >
+                {categories.map((item, index) => {
+                  return (
+                    <option key={item.id} value={index}>
+                      {item.name}
+                    </option>
+                  )
+                })}
+              </Select>
+            </div>
+
+            <button
+              className={styles.buttonFilter}
+              onClick={handleFilterProduct}
+              type="button"
             >
-              {suppliers.map((item, index) => {
-                return (
-                  <option key={item.id} value={index}>
-                    {item.name}
-                  </option>
-                )
-              })}
-            </Select>
-
-            <Select
-              value={groupSelected}
-              onChange={handleChangeGroup}
-              expression="Filtrar por grupo..."
-            >
-              {groups.map((item, index) => {
-                return (
-                  <option key={item.id} value={index}>
-                    {item.name}
-                  </option>
-                )
-              })}
-            </Select>
-
-            <Select
-              value={categorySelected}
-              onChange={(e) => setCategorySelected(e.target.value)}
-              expression="Filtrar por categoria..."
-            >
-              {categories.map((item, index) => {
-                return (
-                  <option key={item.id} value={index}>
-                    {item.name}
-                  </option>
-                )
-              })}
-            </Select>
-
-
+              <BiFilter size={32} />
+            </button>
           </div>
-          <button
-            className={styles.buttonFilter}
-            onClick={handleFilterProduct}
-            type="button"
-          >
-            Filtrar
-          </button>
 
           <article className={styles.list}>
             {products.map(product => (

@@ -87,7 +87,7 @@ export default function Groups({ listGroups }: ListGroupProps) {
             type="button"
             onClick={handleRefreshListGroups}
             path="/grupos/cadastrar"
-            name="Novo grupo"
+            name="Novo"
             title="Grupos"
           />
 

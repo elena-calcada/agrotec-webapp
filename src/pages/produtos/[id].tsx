@@ -293,7 +293,7 @@ export default function EditProduct({ listSuppliers, listGroups, listCategories,
 
               <div className={styles.toggleButtons}>
                 <Button
-                  className={styles.buttonForm}
+                  className={styles.buttonGreen}
                   type="submit"
                   onClick={handleEditImage}
                 >
@@ -301,7 +301,7 @@ export default function EditProduct({ listSuppliers, listGroups, listCategories,
                 </Button>
 
                 <Button
-                  className={styles.buttonToggle}
+                  className={styles.buttonOrange}
                   type="button"
                   onClick={handleNotEditImage}
                 >
@@ -373,7 +373,7 @@ export default function EditProduct({ listSuppliers, listGroups, listCategories,
             <Button
               type="submit"
               loading={loading}
-              className={styles.buttonForm}
+              className={styles.buttonGreen}
             >
               Alterar Informações
             </Button>

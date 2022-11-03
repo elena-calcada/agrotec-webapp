@@ -216,7 +216,7 @@ export default function RegistarProduct({ listSuppliers, listGroups, listCategor
             />
 
             <Button
-              className={styles.buttonForm}
+              className={styles.buttonGreen}
               type="submit"
               loading={loading}
             >

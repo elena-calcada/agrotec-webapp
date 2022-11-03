@@ -1,12 +1,19 @@
 .headerContainer {
   height: 5rem;
+  display: flex;
+  justify-content: center;
+
 }
 
 .headerContent {
+  position: fixed;
   max-width: 1200px;
+  width: 100%;
   height: 5rem;
   margin: 0 auto;
   padding: 0 2rem;
+  background-color: var(--background);
+  z-index: 100;
 
   display: flex;
   justify-content: space-between;
@@ -17,7 +24,7 @@
   }
 }
 
-.menuNav {
+.menuNavDesktop {
   display: flex;
   align-items: center;
 
@@ -50,5 +57,112 @@
     &:hover {
       transform: scale(1.2);
     }
+  }
+}
+
+.iconMenu {
+  display: none;
+}
+
+.menuNavMobile {
+  display: none;
+}
+
+
+@media (max-width: 947px) {
+  .menuNavDesktop {
+    display: none;
+  }
+
+  .iconMenu {
+    display: block;
+  }
+
+  .menuNavMobile {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    top: 60px;
+    left: 0;
+    padding: 60px 40px;
+    transition: 500ms;
+    z-index: 100;
+  }
+
+  .contentMenuMobile {
+    font: 500 1.5rem var(--font);
+    color: var(--dark);
+    text-align: center;
+
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+
+    button {
+      //width: 0;
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      font: 500 1.5rem var(--font);
+      color: var(--dark);
+    }
+  }
+}
+
+
+
+@media(max-height: 321px) {
+  .menuNavMobile {
+    top: 70px;
+    padding: 30px 40px;
+  }
+
+  .contentMenuMobile {
+    text-align: left;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+    button {
+      justify-content: left;
+    }
+  }
+
+}
+
+@media(min-height: 322px) and (max-height: 469px) {
+  .menuNavMobile {
+    top: 70px;
+  }
+
+  .contentMenuMobile {
+    text-align: left;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+
+    button {
+      justify-content: left;
+    }
+  }
+}
+
+@media(min-height: 470px) and (max-height: 600px) {
+  .menuNavMobile {
+    top: 70px;
+  }
+
+  .contentMenuMobile {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
   }
 }

@@ -77,7 +77,7 @@ export default function RegisterGroup() {
             <Button
               type="submit"
               loading={loading}
-              className={styles.buttonForm}
+              className={styles.buttonGreen}
             >
               Cadastrar
             </Button>

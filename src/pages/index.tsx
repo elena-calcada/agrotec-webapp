@@ -66,7 +66,6 @@ export default function Home() {
             />
 
             <Button
-              className={styles.buttonForm}
               type="submit"
               loading={loading}
             >

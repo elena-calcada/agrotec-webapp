@@ -80,7 +80,7 @@ export default function EditGroup({ detailGroup }: GroupProps) {
             <Button
               type="submit"
               loading={loading}
-              className={styles.buttonForm}
+              className={styles.buttonGreen}
             >
               Editar
             </Button>

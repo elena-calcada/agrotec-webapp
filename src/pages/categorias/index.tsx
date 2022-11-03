@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Header } from "../../componentes/Header";
 import { setupAPIClient } from "../../services/api"
 import { canSSRAuth } from "../../utils/canSSRAuth"
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 import { SectionHeader } from "../../componentes/SectionHeader";
 import { SectionItem } from "../../componentes/SectionItem";
 import Modal from "react-modal";
@@ -122,7 +122,7 @@ export default function Categorias({ listCategories, listGroups }: RequestProps)
           <SectionHeader
             type="button"
             path="/categorias/cadastrar"
-            name="Nova categoria"
+            name="Novo"
             title="Categorias"
             onClick={handleRefreshListCategories}
           />

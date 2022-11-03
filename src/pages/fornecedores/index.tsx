@@ -89,7 +89,7 @@ export default function Fornecedores({ listSuppliers }: ListSuppliersProps) {
           <SectionHeader
             type="button"
             title="Fornecedores"
-            name="Novo fornecedor"
+            name="Novo"
             path="/fornecedores/cadastrar"
             onClick={handleRefreshListSuppliers}
           />

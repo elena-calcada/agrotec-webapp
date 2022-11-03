@@ -44,6 +44,10 @@
 
 @media (max-width: 550px) {
   .container {
-    width: 300px;
+    width: 270px;
+  }
+
+  .buttons {
+    gap: 2rem;
   }
 }
